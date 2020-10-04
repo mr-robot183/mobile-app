@@ -15,14 +15,14 @@ class _NewHomeState extends State<NewHome> {
     return showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              title: Text('Do you really want to exit?'),
+              title: Text('Do you really want to exit?', style: TextStyle(color: Colors.black, fontSize: 17),),
               actions: <Widget>[
                 FlatButton(
                     onPressed: () => Navigator.pop(context, false),
-                    child: Text('No')),
+                    child: Text('No', style: TextStyle(fontSize: 15),)),
                 FlatButton(
                     onPressed: () => Navigator.pop(context, true),
-                    child: Text('Yes'))
+                    child: Text('Yes', style: TextStyle(fontSize: 15)))
               ],
             ));
   }
@@ -57,7 +57,7 @@ class _NewHomeState extends State<NewHome> {
                     ),
                     HomeCard(
                       title: 'Ideas',
-                      icon: Icons.confirmation_number,
+                      icon: Icons.lightbulb_outline,
                       iconColor: greenColor,
                     ),
                     HomeCard(
